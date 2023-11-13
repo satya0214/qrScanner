@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Hello World!"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/idFLQrCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        >
+
+        <TextView
+            android:id="@+id/idTVGenerateQR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:elevation="1dp"
+            android:padding="4dp"
+            android:text="Code Will Appear Here"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageViewQRCode"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_below="@id/buttonShare"
+            android:layout_centerHorizontal="true"
+            android:background="#C8D6E1"
+
+             />
+<!--        android:layout_marginTop="16dp"-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageViewQRCode"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="250dp"-->
+<!--            android:background="#ffff" />-->
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/editTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text"
+        android:textColorHint="@color/gray"
+        android:imeOptions="actionDone"
+        android:textColor="@color/gray"
+
+        android:inputType="text"
+        android:layout_below="@+id/idFLQrCode"
+        android:maxLines="1"
+        android:layout_marginTop="16dp"
+        />
+<!--    android:background="#E1EFFA"-->
+
+
+    <Button
+        android:id="@+id/buttonGenerate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextInput"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_btn"
+        android:textColor="@color/gray"
+        android:textAllCaps="false"
+        android:layout_marginTop="5dp"
+        android:text="Generate" />
+
+
+
+    <Button
+        android:id="@+id/buttonShare"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonGenerate"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_btn"
+        android:textColor="@color/gray"
+        android:text="Share"
+        android:textAllCaps="false"
+        android:layout_marginTop="16dp" />
+
+<!--    android:id="@+id/buttonGenerate"-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageViewQRCode"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_below="@id/buttonShare"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="16dp" />-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:itemBackground="@color/gray"
+        app:menu="@menu/nav_item"
+        />
+
+
+</RelativeLayout>

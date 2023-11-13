@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4C4545"
+    tools:context=".Create">
+
+
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Create QR!"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:textSize="34sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:itemBackground="@color/gray"
+        app:menu="@menu/nav_item"
+        />
+
+
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/idFLQrCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+
+        >
+
+        <TextView
+            android:id="@+id/idTVGenerateQR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:elevation="1dp"
+            android:padding="4dp"
+            android:text="Code Will Appear Here"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FC0B0909"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageViewQRCode"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="#ffff" />
+
+
+
+
+
+
+
+    </FrameLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idFLQrCode"
+        android:id="@+id/idTILData"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:hint="Add text to embedd in QR Code"
+        android:padding="5dp"
+        android:textColorHint="#ffff"
+        app:hintTextColor="#ffff"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idEdtData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textImeMultiLine|textMultiLine"
+            android:textColor="#ffff"
+            android:textColorHint="#ffff"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonGenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idTILData"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:text="Generate QR Code"
+        android:textAllCaps="false" />
+</RelativeLayout>
